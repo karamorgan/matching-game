@@ -1,0 +1,177 @@
+:root {
+    --light-tan: rgb(255, 220, 166);
+    --light-blue: rgb(201, 215, 228);
+    --medium-blue: rgb(125, 156, 184);
+    --dark-blue: rgb(58, 75, 91);
+    --title-text: 'Courier New', monospace;
+    --body-text: 'Gill Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: var(--light-blue);
+    margin: 0;
+    overflow: auto;
+}
+
+#title-div {
+    display: flex;
+    justify-content: space-around;
+    height: 12vh;
+    padding: 0 20vw;
+}
+
+h1 {
+    font-family: var(--title-text);
+    font-weight: normal;
+    font-size: 4rem;
+    color: var(--dark-blue);
+    margin: 0;
+    margin-top: auto;
+    line-height: 4rem;;
+}
+
+#toolbar-div {
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    margin: 1vh auto;
+}
+
+#level-div {
+    width: 40%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: var(--dark-blue);
+    border-radius: 0.5rem;
+    position: relative;
+    font-size: 0;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--body-text);
+    margin-right: 0.5rem;
+}
+
+#level-div > label {
+    width: 30%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    z-index: 1;
+    color: var(--medium-blue);
+    transition: all 0.3s ease-out;
+}
+
+#level-div > input:checked + label {
+    color: var(--light-tan);
+}
+
+#level-div > input + label:hover {
+    background-color: var(--light-tan);
+    color:var(--dark-blue);
+}
+
+input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+}
+
+#level-selector {
+    width: 30%;
+    height: 75%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border: 1px solid var(--light-tan);
+    border-radius: 0.5rem;
+    transition: left 0.5s ease-out;
+}
+
+input[id='easy']:checked ~ #level-selector {
+    left: 2%;
+}
+
+input[id='medium']:checked ~ #level-selector {
+    left: 35%;
+}
+
+input[id='hard']:checked ~ #level-selector {
+    left: 68%;
+}
+
+#reset-btn {
+    box-sizing: border-box;
+    width: 12%;
+    height: 100%;
+    background-color: var(--dark-blue);
+    color: var(--light-tan);
+    border-radius: 0.5rem;
+    border: 1px solid var(--dark-blue);
+    font-family: var(--body-text);
+    font-size: 1rem;
+    transition: color 0.3s ease-out;
+    cursor: pointer;
+}
+
+#reset-btn:hover {
+    background-color: var(--light-tan);
+    color: var(--dark-blue);
+    transition: all 0.3s ease-out;
+}
+
+#tries-div {
+    width: 15%;
+    display: inline-block;
+    font-family: var(--body-text);
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--dark-blue);
+    margin-left: auto;
+}
+
+canvas {
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.fa-rotate-right {
+    padding-right: 0.3rem;
+}
+
+#icons-div {
+    position: absolute;
+    box-sizing: border-box;
+    width: 6rem;
+    bottom: 2vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 2rem;
+    color: var(--dark-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-height: 600px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (max-height: 400px) {
+    html {
+        font-size: 10px;
+    }
+}

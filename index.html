@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="matchingStyle.css">
+    <script src="https://kit.fontawesome.com/1e6b7799de.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="title-div">
+        <h1>M</h1>
+        <h1>E</h1>
+        <h1>M</h1>
+        <h1>O</h1>
+        <h1>R</h1>
+        <h1>Y</h1>
+    </div>
+    <div id="toolbar-div">
+        <div id="level-div">
+            <input type="radio" id="easy" value="easy" name="level" checked>
+            <label for="easy">Easy</label>
+            <input type="radio" id="medium" value="medium" name="level">
+            <label for="medium">Medium</label>
+            <input type="radio" id="hard" value="hard" name="level">
+            <label for="hard">Hard</label>
+            <div id="level-selector"></div>
+        </div>
+        <button id="reset-btn"><i class="fa-solid fa-rotate-right"></i>Reset</button>
+        <div id="tries-div">
+            <label for="tries-display">Tries:</label>
+            <span id="tries-display"></span>
+        </div>
+    </div>
+    <canvas id="board-canvas"></canvas>
+    <div id="icons-div">
+        <i class="fa-brands fa-square-js"></i>
+        <i class="fa-brands fa-html5"></i>
+        <i class="fa-brands fa-css3-alt"></i>
+    </div>
+    <script src="matching.js"></script>
+</body>
+</html>
