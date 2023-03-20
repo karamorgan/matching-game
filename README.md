@@ -11,6 +11,8 @@ Okay, there are *some* reasons I did what I did:
     * I wanted to practice coding in the Revealing Module Design Pattern
 * This is adapted from code I originally wrote when first learning JavaScript, before I got to CSS and HTML. The coding environment I was using at the time included the p5.js library, which is based on the Canvas API. Rather than embedding the library in my code (or using a hosted version), I've since converted this project to vanilla Canvas. I've also refactored the structure to not be quite such a hack job.
 
+**Check out the demo [here!](https://karamorgan.github.io/matching-game/)**
+
 ---
 
 ## Technical Overview
